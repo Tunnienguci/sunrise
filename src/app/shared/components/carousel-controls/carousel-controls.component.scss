@@ -1,0 +1,40 @@
+.carousel-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.carousel-controls__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1.5px solid #e0e0e0;
+    background-color: #fff;
+    color: #1a1a1a;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.carousel-controls__btn:hover {
+    background-color: #1a1a1a;
+    color: #fff;
+    border-color: #1a1a1a;
+}
+
+.carousel-controls__btn:focus-visible {
+    outline: 2px solid #1a1a1a;
+    outline-offset: 2px;
+}
+
+.carousel-controls__btn--next {
+    background-color: #1a1a1a;
+    color: #fff;
+    border-color: #1a1a1a;
+}
+
+.carousel-controls__btn--next:hover {
+    background-color: #333;
+}

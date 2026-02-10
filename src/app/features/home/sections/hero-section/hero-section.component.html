@@ -1,0 +1,73 @@
+<section class="hero" id="hero">
+    <div class="hero__container">
+        <div class="hero__banner">
+            <video autoplay muted loop playsinline class="hero__bg-video">
+                <source src="https://ninhvanbay.vn/wp-content/uploads/2023/01/Homepage-Banner.mp4" type="video/mp4" />
+            </video>
+            <div class="hero__overlay"></div>
+
+            <div class="hero__app-badge">
+                <span class="hero__app-text">{{ 'hero.badge' | translate }}</span>
+                <div class="hero__app-icons">
+                    <img ngSrc="assets/svgs/google-play.svg" width="16" height="16" alt="Google Play" />
+                    <img ngSrc="assets/svgs/app-store.svg" width="16" height="16" alt="App Store" />
+                    <img ngSrc="assets/svgs/desktop-app.svg" width="16" height="16" alt="Desktop App" />
+                </div>
+            </div>
+
+            <div class="hero__content">
+                <h1 class="hero__title">
+                    {{ 'hero.title' | translate }}
+                </h1>
+                <p class="hero__subtitle">
+                    {{ 'hero.subtitle' | translate }}
+                </p>
+            </div>
+        </div>
+
+        <div class="hero__search-bar">
+            <form class="hero__form" (ngSubmit)="onSearch()">
+                <div class="hero__field-group">
+                    <label class="hero__label">{{ 'hero.location' | translate }}</label>
+                    <sunrise-select [items]="locations" [formControl]="locationControl"
+                        placeholder="hero.select_location" icon="assets/svgs/location.svg">
+                    </sunrise-select>
+                </div>
+
+                <div class="hero__divider"></div>
+
+                <div class="hero__field-group">
+                    <label class="hero__label">{{ 'hero.type' | translate }}</label>
+                    <sunrise-select [items]="types" [formControl]="typeControl" placeholder="hero.select_type"
+                        icon="assets/svgs/star.svg">
+                    </sunrise-select>
+                </div>
+
+                <div class="hero__divider"></div>
+
+                <div class="hero__field-group">
+                    <label class="hero__label">{{ 'hero.date' | translate }}</label>
+                    <!-- Translation key might need adding -->
+                    <div class="hero__date-wrapper">
+                        <img ngSrc="assets/svgs/calendar.svg" width="16" height="16" class="hero__field-icon" alt="" />
+                        <input type="date" [formControl]="dateControl" class="hero__date-input" />
+                    </div>
+                </div>
+
+                <div class="hero__divider"></div>
+
+                <div class="hero__field-group">
+                    <label class="hero__label">{{ 'hero.price' | translate }}</label>
+                    <sunrise-select [items]="prices" [formControl]="priceTypeControl" placeholder="hero.select_price"
+                        icon="assets/svgs/check.svg">
+                    </sunrise-select>
+                </div>
+
+                <sunrise-button variant="primary" size="md" type="submit" class="hero__search-btn"
+                    ariaLabel="Search hotels">
+                    {{ 'hero.search_btn' | translate }}
+                </sunrise-button>
+            </form>
+        </div>
+    </div>
+</section>

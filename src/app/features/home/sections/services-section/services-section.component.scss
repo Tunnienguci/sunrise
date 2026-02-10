@@ -1,0 +1,222 @@
+.services {
+    padding: 5rem 0;
+    background-color: #f9f9f9;
+}
+
+.services__container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.services__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.services__title {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 0;
+    color: #1a1a1a;
+}
+
+.services__tabs {
+    display: flex;
+    gap: 1rem;
+    background: #fff;
+    padding: 0.5rem;
+    border-radius: 100px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.services__tab {
+    padding: 0.75rem 1.5rem;
+    border-radius: 100px;
+    border: none;
+    background: transparent;
+    color: #555;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.services__tab:hover {
+    color: #1a1a1a;
+}
+
+.services__tab--active {
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.services__tab--active:hover {
+    color: #fff;
+}
+
+.services__content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.services__gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.services__card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 280px;
+    background: #000;
+}
+
+.services__card--featured {
+    grid-column: span 2;
+    height: 350px;
+}
+
+.services__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.services__card:hover .services__image {
+    transform: scale(1.05);
+    opacity: 0.6;
+}
+
+.services__card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.services__card-title {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+}
+
+.services__card-desc {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    max-width: 80%;
+}
+
+.services__card-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.services__card:hover .services__card-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.services__card-btn:hover {
+    background: #fff;
+    color: #1a1a1a;
+}
+
+.services__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 2rem;
+}
+
+.services__info-text {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.services__features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.services__feature-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+.services__check-icon {
+    color: #c8e648;
+    /* SVGs might not inherit color this way unless using currentColor */
+}
+
+@media (max-width: 1024px) {
+    .services__content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .services__header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .services__tabs {
+        width: 100%;
+        overflow-x: auto;
+        padding: 0.25rem;
+    }
+
+    .services__gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .services__card--featured {
+        grid-column: span 1;
+    }
+}

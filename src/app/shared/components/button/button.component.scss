@@ -1,0 +1,79 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: none;
+    border-radius: 100px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn--primary {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.btn--primary:hover:not(:disabled) {
+    background-color: #333;
+}
+
+.btn--secondary {
+    background-color: transparent;
+    color: #1a1a1a;
+    border: 1.5px solid #1a1a1a;
+}
+
+.btn--secondary:hover:not(:disabled) {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.btn--accent {
+    background-color: #c8e648;
+    color: #1a1a1a;
+}
+
+.btn--accent:hover:not(:disabled) {
+    background-color: #b8d638;
+}
+
+.btn--ghost {
+    background-color: transparent;
+    color: #1a1a1a;
+    padding: 0;
+}
+
+.btn--ghost:hover:not(:disabled) {
+    opacity: 0.7;
+}
+
+.btn--sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.8125rem;
+}
+
+.btn--md {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+}
+
+.btn--lg {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+}
+
+.btn:focus-visible {
+    outline: 2px solid #1a1a1a;
+    outline-offset: 2px;
+}

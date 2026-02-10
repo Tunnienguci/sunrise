@@ -1,0 +1,321 @@
+[
+    {
+        "id": "h1",
+        "name": "Six Senses Ninh Van Bay",
+        "location": "Vịnh Ninh Vân, Ninh Hòa, Khánh Hòa",
+        "country": "Vietnam",
+        "region": "Asia",
+        "price": 950,
+        "rating": 4.9,
+        "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+        "gallery": [
+            "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200",
+            "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200",
+            "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200",
+            "https://images.unsplash.com/photo-1540541338287-41700c7cdb61?auto=format&fit=crop&w=1200"
+        ],
+        "type": "resort",
+        "amenities": [
+            "Hồ bơi riêng",
+            "Six Senses Spa",
+            "Tầm nhìn ra biển",
+            "Dịch vụ Quản gia (GEM)",
+            "Thể thao dưới nước",
+            "Yoga Pavilion",
+            "Xe đạp cá nhân",
+            "Loa Bluetooth",
+            "Máy pha cà phê",
+            "Minibar"
+        ],
+        "description": "Thiên đường nghỉ dưỡng ẩn mình giữa vịnh ngọc. Six Senses Ninh Van Bay tọa lạc trên một vịnh biển đầy ấn tượng, mặt hướng ra biển Đông, lưng tựa vào núi. Tất cả các căn biệt thự đều rộng rãi, sang trọng, có sân vườn hoặc hiên tắm nắng, chạy dọc theo bờ biển, nằm trên mặt nước, giữa các tảng đá lớn hay trên sườn núi. Căn nào cũng hướng về phía biển.",
+        "shortDescription": "Khu nghỉ dưỡng sang trọng với biệt thự hồ bơi riêng giữa vịnh ngọc.",
+        "featured": true,
+        "rooms": [
+            {
+                "id": "r1",
+                "name": "Hill Top Pool Villa",
+                "price": 950,
+                "currency": "USD",
+                "size": "158m²",
+                "occupancy": 3,
+                "bedType": "King",
+                "bedrooms": 1,
+                "view": "Ocean view",
+                "description": "Khu biệt thự Hill Top Pool Villa có bể bơi thư giãn, hướng nhìn ra dãy núi trùng điệp phía sau thành phố Nha Trang và nép mình trước khung cảnh tráng lệ của Biển Đông. Phòng ngủ trên đồi có không gian mở với nhà tắm diện tích lớn, bồn rửa mặt riêng biệt và bồn tắm được làm bằng gỗ thủ công.",
+                "amenities": [
+                    "Tầm nhìn toàn cảnh đại dương từ đỉnh đồi",
+                    "Hồ bơi riêng",
+                    "Hiên tắm nắng riêng tư",
+                    "Vòi sen ngoài trời",
+                    "Bồn tắm gỗ thủ công",
+                    "Dịch vụ Quản gia (GEM)"
+                ],
+                "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80",
+                "images": [
+                    "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=800&q=80"
+                ]
+            },
+            {
+                "id": "r2",
+                "name": "Beachfront Pool Villa",
+                "price": 1100,
+                "currency": "USD",
+                "size": "176m²",
+                "occupancy": 3,
+                "bedType": "King",
+                "bedrooms": 1,
+                "view": "Ocean view",
+                "description": "Biệt thự Beachfront Pool Villa nằm ngay mặt tiền biển với lối ra thẳng biển. Hồ bơi riêng và sân vườn riêng biệt tạo nên không gian nghỉ dưỡng hoàn hảo. Không gian sinh hoạt mở trên tầng mang đến tầm nhìn tuyệt đẹp.",
+                "amenities": [
+                    "Vị trí mặt tiền biển",
+                    "Lối ra thẳng biển",
+                    "Hồ bơi riêng và sân vườn riêng",
+                    "Không gian sinh hoạt mở",
+                    "Bồn tắm gỗ thủ công",
+                    "Dịch vụ Quản gia (GEM)"
+                ],
+                "imageUrl": "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=800&q=80",
+                "images": [
+                    "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1602002418816-5c0aeef426aa?auto=format&fit=crop&w=800&q=80"
+                ]
+            },
+            {
+                "id": "r3",
+                "name": "Rock Pool Villa",
+                "price": 1250,
+                "currency": "USD",
+                "size": "187m²",
+                "occupancy": 3,
+                "bedType": "King",
+                "bedrooms": 1,
+                "view": "Ocean view",
+                "description": "Biệt thự Rock Pool Villa tọa lạc tại hướng Tây của vịnh, giữa những tảng đá granit tự nhiên hùng vĩ. Phòng khách lớn kèm giường sofa, phòng tắm riêng biệt với bồn tắm gỗ thủ công và buồng tắm đứng.",
+                "amenities": [
+                    "Vị trí giữa vách đá tự nhiên",
+                    "Hồ bơi riêng",
+                    "Phòng khách lớn kèm giường sofa",
+                    "Bồn tắm gỗ thủ công",
+                    "Vòi sen ngoài trời",
+                    "Dịch vụ Quản gia (GEM)"
+                ],
+                "imageUrl": "https://images.unsplash.com/photo-1540541338287-41700c7cdb61?auto=format&fit=crop&w=800&q=80",
+                "images": [
+                    "https://images.unsplash.com/photo-1540541338287-41700c7cdb61?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=800&q=80"
+                ]
+            },
+            {
+                "id": "r4",
+                "name": "Water Pool Villa",
+                "price": 1050,
+                "currency": "USD",
+                "size": "154m²",
+                "occupancy": 3,
+                "bedType": "King",
+                "bedrooms": 1,
+                "view": "Ocean view",
+                "description": "Biệt thự Water Pool Villa tọa lạc tại hướng Đông của vịnh, nổi trên mặt nước biển. Cầu thang đi trực tiếp xuống biển, hồ bơi riêng và hiên tắm nắng ngoài trời mang đến trải nghiệm độc đáo giữa biển khơi.",
+                "amenities": [
+                    "Nổi trên mặt nước",
+                    "Cầu thang xuống biển",
+                    "Hồ bơi riêng",
+                    "Phòng khách kèm giường sofa",
+                    "Hiên tắm nắng ngoài trời",
+                    "Dịch vụ Quản gia (GEM)"
+                ],
+                "imageUrl": "https://images.unsplash.com/photo-1439130490301-25e322d88054?auto=format&fit=crop&w=800&q=80",
+                "images": [
+                    "https://images.unsplash.com/photo-1439130490301-25e322d88054?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=80"
+                ]
+            },
+            {
+                "id": "r5",
+                "name": "Family Beach Pool Villa",
+                "price": 1500,
+                "currency": "USD",
+                "size": "207m²",
+                "occupancy": 5,
+                "bedType": "King + Twin",
+                "bedrooms": 2,
+                "view": "Ocean view",
+                "description": "Biệt thự Family Beach Pool Villa nằm ngay mặt tiền biển, thiết kế 2 tầng với 2 phòng ngủ có phòng tắm riêng. Hồ bơi riêng và sân vườn riêng biệt, lý tưởng cho gia đình.",
+                "amenities": [
+                    "Mặt tiền biển, 2 phòng ngủ",
+                    "Thiết kế 2 tầng",
+                    "Hồ bơi riêng và sân vườn",
+                    "Phòng tắm riêng từng phòng",
+                    "Bồn tắm gỗ master bedroom",
+                    "Dịch vụ Quản gia (GEM)"
+                ],
+                "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
+                "images": [
+                    "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=800&q=80"
+                ]
+            },
+            {
+                "id": "r6",
+                "name": "Hill Top Pool Villa 2 Phòng Ngủ",
+                "price": 1800,
+                "currency": "USD",
+                "size": "267m²",
+                "occupancy": 5,
+                "bedType": "King + Twin",
+                "bedrooms": 2,
+                "view": "Ocean view",
+                "description": "Tầm nhìn toàn cảnh đại dương từ vị trí đỉnh đồi. 2 phòng ngủ với 2 phòng tắm riêng biệt, phòng khách lớn kèm giường sofa, không gian rộng rãi và riêng tư tuyệt đối.",
+                "amenities": [
+                    "Toàn cảnh đại dương từ đỉnh đồi",
+                    "2 phòng ngủ, 2 phòng tắm",
+                    "Hồ bơi riêng và sân vườn",
+                    "Phòng khách lớn kèm giường sofa",
+                    "Bồn tắm gỗ thủ công",
+                    "Dịch vụ Quản gia (GEM)"
+                ],
+                "imageUrl": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80",
+                "images": [
+                    "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=800&q=80"
+                ]
+            },
+            {
+                "id": "r7",
+                "name": "The Rock Retreat",
+                "price": 3500,
+                "currency": "USD",
+                "size": "770m²",
+                "occupancy": 9,
+                "bedType": "Multiple Kings",
+                "bedrooms": 3,
+                "view": "Ocean view",
+                "description": "Tọa lạc ở vị trí đắc địa nhất tại mũi Tây vịnh. 3 phòng ngủ đều có phòng tắm riêng, cầu trượt nước dẫn xuống hồ bơi riêng, sân tắm nắng rộng trên đá và khu sinh hoạt mở có điều hòa.",
+                "amenities": [
+                    "Vị trí đắc địa mũi Tây vịnh",
+                    "3 phòng ngủ, 3 phòng tắm",
+                    "Cầu trượt nước xuống hồ bơi",
+                    "Sân tắm nắng rộng trên đá",
+                    "Khu sinh hoạt mở có điều hòa",
+                    "Dịch vụ Quản gia (GEM)"
+                ],
+                "imageUrl": "https://images.unsplash.com/photo-1602002418816-5c0aeef426aa?auto=format&fit=crop&w=800&q=80",
+                "images": [
+                    "https://images.unsplash.com/photo-1602002418816-5c0aeef426aa?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=800&q=80"
+                ]
+            },
+            {
+                "id": "r8",
+                "name": "The Water Reserve",
+                "price": 4200,
+                "currency": "USD",
+                "size": "900m²",
+                "occupancy": 9,
+                "bedType": "Multiple Kings",
+                "bedrooms": 3,
+                "view": "Overlooking coral formations",
+                "description": "Tọa lạc tại mũi Đông vịnh, di chuyển bằng thuyền speedboat riêng. 3 phòng ngủ chính riêng biệt, cầu trượt từ phòng ngủ xuống hồ bơi, sân tắm nắng rộng rãi cho 6 người.",
+                "amenities": [
+                    "Mũi Đông vịnh, speedboat riêng",
+                    "3 phòng ngủ, 3 phòng tắm",
+                    "Cầu trượt xuống hồ bơi",
+                    "Sân tắm nắng rộng cho 6 người",
+                    "Khu vực dùng bữa ngoài trời",
+                    "Dịch vụ Quản gia (GEM)"
+                ],
+                "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=80",
+                "images": [
+                    "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1439130490301-25e322d88054?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80"
+                ]
+            },
+            {
+                "id": "r9",
+                "name": "Hill Top Reserve",
+                "price": 3800,
+                "currency": "USD",
+                "size": "727m²",
+                "occupancy": 9,
+                "bedType": "Multiple Kings",
+                "bedrooms": 3,
+                "view": "Ocean view",
+                "description": "Tọa lạc tại mũi Đông vịnh với vị trí đắc địa, di chuyển bằng thuyền speedboat riêng. 3 phòng ngủ chính riêng biệt, cầu trượt từ phòng ngủ xuống hồ bơi, khu sinh hoạt mở có lắp điều hòa.",
+                "amenities": [
+                    "Vị trí đắc địa mũi Đông vịnh",
+                    "3 phòng ngủ, 3 phòng tắm",
+                    "Cầu trượt xuống hồ bơi",
+                    "Sân tắm nắng rộng cho 6 người",
+                    "Khu sinh hoạt mở có điều hòa",
+                    "Dịch vụ Quản gia (GEM)"
+                ],
+                "imageUrl": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=800&q=80",
+                "images": [
+                    "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1540541338287-41700c7cdb61?auto=format&fit=crop&w=800&q=80"
+                ]
+            }
+        ],
+        "reviews": [
+            {
+                "id": "rv1",
+                "author": "Sarah Jenkins",
+                "avatar": "https://i.pravatar.cc/150?u=sarah",
+                "rating": 5,
+                "date": "2024-01-15",
+                "comment": "Absolutely stunning. The Rock Pool Villa was beyond our wildest expectations — sleeping among natural granite boulders with the ocean just below. The GEM butler anticipated our every need."
+            },
+            {
+                "id": "rv2",
+                "author": "Nguyễn Minh Tuấn",
+                "avatar": "https://i.pravatar.cc/150?u=tuan",
+                "rating": 5,
+                "date": "2024-03-22",
+                "comment": "Thiên đường thực sự! Biệt thự Water Pool Villa nằm trên mặt nước tuyệt đẹp. Dịch vụ spa với liệu trình mát-xa tre truyền thống rất tuyệt. Nhất định sẽ quay lại."
+            },
+            {
+                "id": "rv3",
+                "author": "Kim Seo-yeon",
+                "avatar": "https://i.pravatar.cc/150?u=seoyeon",
+                "rating": 5,
+                "date": "2024-05-10",
+                "comment": "닌반베이의 아름다운 경치와 완벽한 서비스가 최고였습니다. Hill Top Pool Villa에서 보는 일출이 정말 감동적이었어요."
+            },
+            {
+                "id": "rv4",
+                "author": "Marie Dubois",
+                "avatar": "https://i.pravatar.cc/150?u=marie",
+                "rating": 5,
+                "date": "2024-07-05",
+                "comment": "The Beachfront Pool Villa was paradise. Waking up to the sound of waves, having breakfast on the sundeck with that view... The cooking class was also a wonderful experience."
+            },
+            {
+                "id": "rv5",
+                "author": "Trần Thị Hương",
+                "avatar": "https://i.pravatar.cc/150?u=huong",
+                "rating": 4,
+                "date": "2024-09-18",
+                "comment": "Family Beach Pool Villa rất phù hợp cho gia đình. Bọn trẻ rất thích hồ bơi riêng. Tiệc nướng BBQ trên bãi biển dưới ánh hoàng hôn thật khó quên."
+            }
+        ],
+        "policies": [
+            "Nhận phòng: 14:00",
+            "Trả phòng: 12:00",
+            "Di chuyển bằng cano cao tốc (inclusive)",
+            "Trẻ em được chào đón",
+            "Không mang thú cưng",
+            "Dịch vụ đón khách tại sân bay",
+            "Y tá tại chỗ"
+        ]
+    }
+]

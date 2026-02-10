@@ -1,0 +1,70 @@
+<section class="services" id="services" aria-labelledby="services-heading">
+    <div class="services__container">
+        <div class="services__header">
+            <h2 id="services-heading" class="services__title">Facilities</h2>
+            <div class="services__tabs" role="tablist">
+                @for (tab of facilityService.allTabs(); track tab.id) {
+                <button class="services__tab" [class.services__tab--active]="facilityService.activeTab() === tab.id"
+                    (click)="facilityService.setActiveTab(tab.id)" role="tab"
+                    [attr.aria-selected]="facilityService.activeTab() === tab.id"
+                    [attr.aria-controls]="'panel-' + tab.id" type="button">
+                    {{ tab.label }}
+                </button>
+                }
+            </div>
+            <sunrise-button variant="primary" size="md" ariaLabel="See all facilities">
+                See All
+                <img ngSrc="assets/svgs/arrow-right.svg" width="16" height="16" alt="" />
+            </sunrise-button>
+        </div>
+
+        <div class="services__content">
+            <div class="services__gallery">
+                @for (item of facilityService.filteredFacilities(); track item.id; let i = $index) {
+                <div class="services__card" [class.services__card--featured]="i === 0">
+                    <img [src]="item.imageUrl" [alt]="item.title" class="services__image" loading="lazy" />
+                    <div class="services__card-content">
+                        <h3 class="services__card-title">{{ item.title }}</h3>
+                        <p class="services__card-desc">{{ item.description }}</p>
+                        <button class="services__card-btn" [attr.aria-label]="'View details for ' + item.title"
+                            type="button">
+                            <img ngSrc="assets/svgs/arrow-up-right.svg" width="20" height="20" alt="" />
+                        </button>
+                    </div>
+                </div>
+                }
+            </div>
+
+            <div class="services__info">
+                <sunrise-section-heading pill="Facilities" label="Our Services">
+                    We provide the best<br />
+                    facilities for you
+                </sunrise-section-heading>
+
+                <p class="services__info-text">
+                    Experience world-class amenities designed for your comfort and
+                    enjoyment. From state-of-the-art fitness centers to relaxing spas, we
+                    have everything you need for a perfect stay.
+                </p>
+
+                <ul class="services__features-list">
+                    <li class="services__feature-item">
+                        <img ngSrc="assets/svgs/check.svg" width="20" height="20" alt="Check"
+                            class="services__check-icon" />
+                        <span>24/7 Room Service</span>
+                    </li>
+                    <li class="services__feature-item">
+                        <img ngSrc="assets/svgs/check.svg" width="20" height="20" alt="Check"
+                            class="services__check-icon" />
+                        <span>High-speed Wi-Fi</span>
+                    </li>
+                    <li class="services__feature-item">
+                        <img ngSrc="assets/svgs/check.svg" width="20" height="20" alt="Check"
+                            class="services__check-icon" />
+                        <span>Wellness & Spa</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

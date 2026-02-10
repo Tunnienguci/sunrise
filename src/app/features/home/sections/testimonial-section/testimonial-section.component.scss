@@ -1,0 +1,131 @@
+.testimonials {
+    padding: 5rem 0;
+    background-color: #f9f9f9;
+}
+
+.testimonials__container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+}
+
+.testimonials__header {
+    position: relative;
+}
+
+.testimonials__quote-icon {
+    display: block;
+    margin: 0 auto 1.5rem;
+    color: #e0e0e0;
+}
+
+.testimonials__title {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.testimonials__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 800px;
+}
+
+.testimonials__quote {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #555;
+    font-style: italic;
+    margin: 0;
+}
+
+.testimonials__author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonials__avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonials__author-info {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.testimonials__author-name {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    font-style: normal;
+}
+
+.testimonials__author-role {
+    font-size: 0.75rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.testimonials__controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.testimonials__counter {
+    font-size: 0.875rem;
+    color: #888;
+    font-weight: 500;
+    min-width: 40px;
+}
+
+.testimonials__rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 2rem;
+    width: 100%;
+}
+
+.testimonials__stars {
+    display: flex;
+    gap: 0.25rem;
+    color: #1a1a1a;
+}
+
+.testimonials__rating-text {
+    font-size: 0.875rem;
+    color: #888;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .testimonials__title {
+        font-size: 1.75rem;
+    }
+
+    .testimonials__quote {
+        font-size: 1.125rem;
+    }
+}

@@ -1,0 +1,19 @@
+<div class="section-heading">
+    @if (pill()) {
+    <span class="section-heading__pill">
+        {{ pill() }}
+        @if (pillIcon()) {
+        <span class="section-heading__pill-icon" aria-hidden="true">{{ pillIcon() }}</span>
+        }
+    </span>
+    }
+    @if (label()) {
+    <span class="section-heading__label">{{ label() }}</span>
+    }
+    <h2 class="section-heading__title">
+        <ng-content />
+    </h2>
+    @if (subtitle()) {
+    <p class="section-heading__subtitle">{{ subtitle() }}</p>
+    }
+</div>

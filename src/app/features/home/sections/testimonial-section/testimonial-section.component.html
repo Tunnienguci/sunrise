@@ -1,0 +1,50 @@
+<section class="testimonials" id="testimonials" aria-labelledby="testimonials-heading">
+    <div class="testimonials__container">
+        <div class="testimonials__header">
+            <h2 id="testimonials-heading" class="testimonials__title">
+                <img ngSrc="assets/svgs/quote.svg" width="40" height="40" alt="" class="testimonials__quote-icon"
+                    aria-hidden="true" />
+                Every Stay Has a Story,<br />
+                Here’s What Our Guests Say
+            </h2>
+        </div>
+
+        @if (testimonialService.activeTestimonial(); as testimonial) {
+        <div class="testimonials__content">
+            <blockquote class="testimonials__quote">
+                "{{ testimonial.content }}"
+            </blockquote>
+
+            <div class="testimonials__author">
+                <img [src]="testimonial.avatar" [alt]="testimonial.author" class="testimonials__avatar"
+                    loading="lazy" />
+                <div class="testimonials__author-info">
+                    <cite class="testimonials__author-name">{{ testimonial.author }}</cite>
+                    <span class="testimonials__author-role">
+                        {{ testimonial.role }}
+                    </span>
+                </div>
+            </div>
+
+            <div class="testimonials__controls">
+                <span class="testimonials__counter">
+                    {{ testimonialService.currentIndex() + 1 }} / {{ testimonialService.totalCount() }}
+                </span>
+                <sunrise-carousel-controls itemLabel="testimonial" (previous)="testimonialService.previous()"
+                    (next)="testimonialService.next()" />
+            </div>
+        </div>
+        }
+
+        <div class="testimonials__rating">
+            <div class="testimonials__stars" aria-label="5 out of 5 stars">
+                @for (star of [1,2,3,4,5]; track star) {
+                <img ngSrc="assets/svgs/star.svg" width="20" height="20" alt="" />
+                }
+            </div>
+            <p class="testimonials__rating-text">
+                Rated 4.9/5 based on over 1000+ reviews
+            </p>
+        </div>
+    </div>
+</section>

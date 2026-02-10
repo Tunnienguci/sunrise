@@ -1,0 +1,29 @@
+<div class="sunrise-select" [class.sunrise-select--open]="isOpen()" (click)="toggle($event)">
+    <div class="sunrise-select__trigger">
+        @if (icon()) {
+        <!-- Optimized: Using ngSrc if external, or I should have used inline for icon. But sticking to input logic -->
+        <img [src]="icon()" width="16" height="16" class="sunrise-select__icon" alt="" />
+        }
+
+        <span class="sunrise-select__value" [class.sunrise-select__value--placeholder]="!value()">
+            {{ selectedLabel() | translate }}
+        </span>
+
+        <!-- Optimized: Inline SVG for Chevron to ensure visibility and prevent 404s -->
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" class="sunrise-select__chevron" aria-hidden="true">
+            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </div>
+
+    @if (isOpen()) {
+    <ul class="sunrise-select__options" role="listbox">
+        @for (item of items(); track item.value) {
+        <li class="sunrise-select__option" [class.sunrise-select__option--selected]="item.value === value()"
+            (click)="select(item, $event)" role="option" [attr.aria-selected]="item.value === value()">
+            {{ item.label | translate }}
+        </li>
+        }
+    </ul>
+    }
+</div>

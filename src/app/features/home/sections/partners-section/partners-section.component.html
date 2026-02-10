@@ -1,0 +1,47 @@
+<section class="partners" id="membership" aria-labelledby="partners-heading">
+    <div class="partners__container">
+        <sunrise-section-heading label="Explore Hospital ›"
+            subtitle="Find the best hospitals around you with ease and access top-notch healthcare services tailored to your needs.">
+            Discover top hotel options nearby
+            <br />
+            Effortless hotel booking, tailored for you
+        </sunrise-section-heading>
+
+        <sunrise-button variant="accent" size="md" ariaLabel="Get started with hotel booking">
+            Get started
+            <img ngSrc="assets/svgs/circle-arrow-right.svg" width="16" height="16" alt="" />
+        </sunrise-button>
+
+        <div class="partners__logos" role="list" aria-label="Our partner brands">
+            @for (partner of partners; track partner.id) {
+            <div class="partners__logo-item" role="listitem">
+                <span class="partners__logo-text">{{ partner.name }}</span>
+            </div>
+            }
+        </div>
+
+        <div class="partners__gallery">
+            <div class="partners__gallery-main">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80"
+                    alt="Luxury hotel pool area at sunset" class="partners__gallery-image" loading="lazy" />
+                <div class="partners__gallery-overlay">
+                    <p class="partners__gallery-text">
+                        Join our community of travelers and experience unforgettable stays
+                    </p>
+                    <sunrise-button variant="accent" size="sm" ariaLabel="Experience now">
+                        Experience now
+                        <img ngSrc="assets/svgs/arrow-right.svg" width="14" height="14" alt="" />
+                    </sunrise-button>
+                </div>
+            </div>
+            <div class="partners__gallery-side">
+                <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=400&q=80"
+                    alt="Modern hotel room with natural lighting" class="partners__gallery-image" loading="lazy" />
+            </div>
+            <div class="partners__gallery-side">
+                <img src="https://media.sixsenses.com/B60H3R33/at/2fggkn7jsmw5fxg8578p53c/1_Destination_Dining_Wine_Cellar.jpg?format=webp&width=790&height=790&fit=crop"
+                    alt="Cozy hotel lounge area" class="partners__gallery-image" loading="lazy" />
+            </div>
+        </div>
+    </div>
+</section>
