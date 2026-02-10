@@ -1,21 +1,18 @@
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100/10">
-    <div class="max-w-[1320px] mx-auto px-8 py-3.5 flex items-center justify-between gap-8">
+<header class="header">
+    <div class="header__container">
         <!-- Logo -->
-        <a routerLink="/" aria-label="Sunrise Hotel - Home"
-            class="flex items-center gap-2 text-primary no-underline shrink-0 group">
-            <img ngSrc="assets/svgs/logo.svg" width="28" height="28" alt="" priority
-                class="transition-transform group-hover:rotate-12" />
-            <span class="font-serif text-xl font-bold tracking-tight">Sunrise</span>
+        <a routerLink="/" aria-label="Sunrise Hotel - Home" class="header__logo">
+            <img ngSrc="assets/svgs/logo.svg" width="28" height="28" alt="" priority />
+            <span class="header__logo-text">Sunrise</span>
         </a>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden md:flex flex-1 justify-center" aria-label="Main navigation">
-            <ul class="flex items-center gap-8 list-none m-0 p-0">
+        <nav class="header__nav" aria-label="Main navigation">
+            <ul class="header__nav-list">
                 @for (item of navItems; track item.label) {
                 <li>
-                    <a [routerLink]="item.route" routerLinkActive="text-primary font-medium"
-                        [routerLinkActiveOptions]="{exact: item.route === '/'}"
-                        class="text-sm font-normal text-text-secondary no-underline transition-all hover:text-primary hover:font-medium whitespace-nowrap">
+                    <a [routerLink]="item.route" routerLinkActive="header__nav-link--active"
+                        [routerLinkActiveOptions]="{exact: item.route === '/'}" class="header__nav-link">
                         {{ item.label | translate }}
                     </a>
                 </li>
@@ -24,12 +21,10 @@
         </nav>
 
         <!-- Actions -->
-        <div class="hidden md:flex items-center gap-4 shrink-0">
+        <div class="header__actions">
             <!-- Language Switcher -->
-            <div
-                class="relative flex items-center bg-gray-50 rounded-full h-10 px-3 cursor-pointer group hover:bg-gray-100 transition-colors">
-                <select (change)="setLanguage($any($event.target).value)"
-                    class="appearance-none border-none bg-transparent w-full h-full pl-1 pr-6 cursor-pointer outline-none text-sm font-medium text-primary z-[2]"
+            <div class="header__lang-wrap">
+                <select (change)="setLanguage($any($event.target).value)" class="header__lang-select"
                     aria-label="Select Language">
                     @for(lang of languageService.languages; track lang.code) {
                     <option [value]="lang.code" [selected]="lang.code === languageService.currentLang()">
@@ -37,25 +32,20 @@
                     </option>
                     }
                 </select>
-                <img ngSrc="assets/svgs/chevron-down.svg" width="12" height="12"
-                    class="absolute right-3 top-1/2 -translate-y-1/2 opacity-60 pointer-events-none group-hover:opacity-100"
-                    alt="" />
+                <img ngSrc="assets/svgs/chevron-down.svg" width="12" height="12" class="header__lang-chevron" alt="" />
             </div>
 
             <!-- Auth / Profile -->
             @if (authService.currentUser(); as user) {
-            <div class="flex items-center gap-3 cursor-pointer relative group">
-                <img [src]="user.photoUrl" class="w-9 h-9 rounded-full border border-gray-200 object-cover"
-                    [alt]="user.name">
-                <div class="hidden lg:block text-right">
-                    <p class="text-sm font-bold text-primary leading-none">{{ user.name }}</p>
-                    <button (click)="authService.logout()"
-                        class="text-[10px] text-red-500 hover:underline uppercase tracking-wider font-bold mt-1">Logout</button>
+            <div class="header__user">
+                <img [src]="user.photoUrl" class="header__user-avatar" [alt]="user.name">
+                <div class="header__user-info">
+                    <p class="header__user-name">{{ user.name }}</p>
+                    <button (click)="authService.logout()" class="header__logout-btn">Logout</button>
                 </div>
             </div>
             } @else {
-            <button (click)="authService.login('google')"
-                class="text-sm font-medium text-text-secondary hover:text-primary transition-colors">
+            <button (click)="authService.login('google')" class="header__login-btn">
                 Log in
             </button>
             }
@@ -66,49 +56,43 @@
         </div>
 
         <!-- Mobile Toggle -->
-        <button class="md:hidden bg-transparent border-none p-2 cursor-pointer" (click)="toggleMobileMenu()"
-            [attr.aria-expanded]="mobileMenuOpen()" aria-label="Toggle navigation menu" type="button">
+        <button class="header__mobile-toggle" (click)="toggleMobileMenu()" [attr.aria-expanded]="mobileMenuOpen()"
+            aria-label="Toggle navigation menu" type="button">
             <img ngSrc="assets/svgs/hamburger.svg" width="24" height="24" alt="Menu" />
         </button>
     </div>
 
     <!-- Mobile Menu -->
     @if (mobileMenuOpen()) {
-    <div class="md:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-100 shadow-xl p-6 flex flex-col animate-fade-in"
-        role="navigation" aria-label="Mobile navigation">
-        <ul class="flex flex-col list-none m-0 p-0 w-full">
+    <div class="header__mobile-menu" role="navigation" aria-label="Mobile navigation">
+        <ul class="header__mobile-nav">
             @for (item of navItems; track item.label) {
             <li>
-                <a [routerLink]="item.route" (click)="closeMobileMenu()"
-                    class="block py-4 text-base text-primary no-underline border-b border-gray-50 hover:text-text-secondary transition-colors">
+                <a [routerLink]="item.route" (click)="closeMobileMenu()" class="header__mobile-link">
                     {{ item.label | translate }}
                 </a>
             </li>
             }
         </ul>
 
-        <div class="mt-6 flex flex-col gap-4">
+        <div class="header__mobile-actions">
             @if (authService.currentUser(); as user) {
-            <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
-                <img [src]="user.photoUrl" class="w-10 h-10 rounded-full border border-gray-200 object-cover"
-                    [alt]="user.name">
-                <div class="flex-1">
-                    <p class="text-sm font-bold text-primary">{{ user.name }}</p>
-                    <p class="text-xs text-text-muted">{{ user.email }}</p>
+            <div class="header__mobile-user">
+                <img [src]="user.photoUrl" class="header__mobile-user-avatar" [alt]="user.name">
+                <div class="header__mobile-user-info">
+                    <p class="header__mobile-user-name">{{ user.name }}</p>
+                    <p class="header__mobile-user-email">{{ user.email }}</p>
                 </div>
-                <button (click)="authService.logout()"
-                    class="text-xs text-red-500 font-bold px-2 py-1 bg-white rounded border border-gray-200">Logout</button>
+                <button (click)="authService.logout()" class="header__mobile-logout">Logout</button>
             </div>
             } @else {
-            <button (click)="authService.login('google')"
-                class="w-full py-3 text-center font-medium border border-gray-200 rounded-lg hover:bg-gray-50">
+            <button (click)="authService.login('google')" class="header__mobile-login">
                 Log in
             </button>
             }
 
-            <div class="relative w-full border border-gray-200 rounded-lg bg-white h-12">
-                <select (change)="setLanguage($any($event.target).value)"
-                    class="w-full h-full px-4 appearance-none gl-transparent outline-none bg-white rounded-lg">
+            <div class="header__mobile-lang-wrap">
+                <select (change)="setLanguage($any($event.target).value)" class="header__mobile-lang-select">
                     @for(lang of languageService.languages; track lang.code) {
                     <option [value]="lang.code" [selected]="lang.code === languageService.currentLang()">
                         {{ lang.label }}
@@ -117,7 +101,7 @@
                 </select>
             </div>
 
-            <sunrise-button variant="primary" size="lg" ariaLabel="Book a hotel room now" class="w-full">
+            <sunrise-button variant="primary" size="lg" ariaLabel="Book a hotel room now">
                 {{ 'hero.book_now' | translate }}
             </sunrise-button>
         </div>

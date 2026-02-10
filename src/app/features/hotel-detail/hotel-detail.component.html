@@ -1,71 +1,64 @@
-<div class="min-h-screen pb-16 bg-gray-50">
+<div class="detail-page">
     @if (hotel(); as h) {
-    <div class="relative h-[50vh] min-h-[400px] bg-gray-200">
-        <img [ngSrc]="h.imageUrl" [alt]="h.name" fill priority class="object-cover" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/10"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-8 max-w-[1320px] mx-auto text-white z-[2]">
-            <a routerLink="/"
-                class="inline-flex items-center gap-2 px-4 py-2 mb-4 text-white bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors font-medium no-underline">
+    <div class="detail-hero">
+        <img [src]="h.imageUrl" [alt]="h.name" class="detail-hero__img" />
+        <div class="detail-hero__overlay"></div>
+        <div class="detail-hero__content">
+            <a routerLink="/" class="detail-hero__back">
                 &larr; {{ 'nav.home' | translate }}
             </a>
-            <h1 class="font-serif text-4xl md:text-6xl mb-2 font-semibold drop-shadow-md leading-tight">{{ h.name }}
-            </h1>
-            <p class="flex items-center gap-2 text-lg opacity-90 font-medium">
-                <img ngSrc="assets/svgs/location.svg" width="16" height="16" alt="" class="brightness-0 invert" />
+            <h1 class="detail-hero__title">{{ h.name }}</h1>
+            <p class="detail-hero__location">
+                <img ngSrc="assets/svgs/location.svg" width="16" height="16" alt="" />
                 {{ h.location }}
             </p>
         </div>
     </div>
 
-    <div class="max-w-[1320px] mx-auto px-4 md:px-8 py-12">
-        <div class="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-12">
-            <div class="min-w-0">
-                <nav
-                    class="flex gap-8 border-b border-gray-200 mb-8 sticky top-[80px] bg-gray-50/95 backdrop-blur-sm z-10 overflow-x-auto">
-                    <a routerLink="overview" routerLinkActive="border-b-2 border-primary text-primary"
-                        class="pb-4 pt-2 text-text-secondary font-medium hover:text-primary transition-colors cursor-pointer whitespace-nowrap">
+    <div class="detail-body">
+        <div class="detail-layout">
+            <div class="detail-main">
+                <nav class="detail-tabs">
+                    <a routerLink="overview" routerLinkActive="detail-tab--active" class="detail-tab">
                         {{ 'nav.about' | translate }}
                     </a>
-                    <a routerLink="rooms" routerLinkActive="border-b-2 border-primary text-primary"
-                        class="pb-4 pt-2 text-text-secondary font-medium hover:text-primary transition-colors cursor-pointer whitespace-nowrap">
-                        Accommodations
+                    <a routerLink="rooms" routerLinkActive="detail-tab--active" class="detail-tab">
+                        Chỗ ở
                     </a>
-                    <a routerLink="reviews" routerLinkActive="border-b-2 border-primary text-primary"
-                        class="pb-4 pt-2 text-text-secondary font-medium hover:text-primary transition-colors cursor-pointer whitespace-nowrap">
-                        Reviews
+                    <a routerLink="reviews" routerLinkActive="detail-tab--active" class="detail-tab">
+                        Đánh giá
                     </a>
                 </nav>
 
                 <router-outlet></router-outlet>
             </div>
 
-            <aside class="lg:sticky lg:top-[100px] h-fit">
-                <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
-                    <div class="flex items-baseline gap-2 mb-4">
-                        <span class="font-serif text-4xl font-bold text-primary">{{ h.price |
+            <aside class="detail-sidebar">
+                <div class="detail-booking">
+                    <div class="detail-booking__price">
+                        <span class="detail-booking__amount">{{ h.price |
                             currency:'USD':'symbol':'1.0-0' }}</span>
-                        <span class="text-text-secondary">/ night</span>
+                        <span class="detail-booking__per">/ night</span>
                     </div>
-                    <div
-                        class="flex items-center gap-2 mb-8 bg-gray-50 px-4 py-2 rounded-lg inline-flex w-full justify-center">
+                    <div class="detail-booking__rating">
                         <img ngSrc="assets/svgs/star.svg" width="16" height="16" alt="Rating" />
-                        <span class="font-bold text-primary">{{ h.rating }} / 5</span>
-                        <span class="text-text-muted">• Excellent</span>
+                        <span class="detail-booking__rating-val">{{ h.rating }} / 5</span>
+                        <span class="detail-booking__rating-label">• Excellent</span>
                     </div>
 
-                    <sunrise-button variant="primary" size="lg" class="w-full block">
+                    <sunrise-button variant="primary" size="lg">
                         {{ 'hero.book_now' | translate }}
                     </sunrise-button>
 
-                    <p class="text-xs text-center text-text-muted mt-4">Safe & Secure Booking</p>
+                    <p class="detail-booking__note">Safe & Secure Booking</p>
                 </div>
             </aside>
         </div>
     </div>
     } @else {
-    <div class="min-h-[50vh] flex flex-col items-center justify-center text-center p-8 bg-gray-50">
-        <h2 class="font-serif text-3xl mb-4 text-primary">Hotel not found</h2>
-        <a routerLink="/" class="text-primary underline hover:text-accent transition-colors">Return to Home</a>
+    <div class="detail-notfound">
+        <h2>Hotel not found</h2>
+        <a routerLink="/">Return to Home</a>
     </div>
     }
 </div>
